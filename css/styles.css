@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-accent: #A7030E;
+    --main-bg: #FAFAFA;
+}
+
 html, body {
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
     color: #000;
     font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg);
 }
 
 img {
@@ -23,6 +29,15 @@ button {
     cursor: pointer;
     padding: 0;
     border: none;
+    padding: 11px;
+    max-width: 193px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 8px;
+    transition: all ease-in-out .4s;
 }
 
 a {
@@ -47,3 +62,232 @@ h1, h2, h3, h4, p {
     width: 95%;
     margin: 0 auto;
 }
+
+.button--main {
+    background: var(--main-accent);
+    border: 1px solid var(--main-accent);
+}
+
+.button--main:hover {
+    background: transparent;
+    color: var(--main-accent);
+}
+
+.button--second {
+    color: var(--main-accent);
+}
+
+.button--second:hover {
+    background-color: var(--main-accent);
+    color: #fff;
+}
+
+.button--transparent {
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+}
+
+.button--transparent:hover {
+    background-color: #fff;
+    color: var(--main-accent);
+}
+
+.section {
+    margin-bottom: 180px;
+    position: relative;
+}
+
+/* HEADER START */
+.header {
+    padding: 19px 0;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul,
+.header__right-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li:not(:first-child, :last-child) {
+    margin-right: 60px;
+}
+
+.nav ul li:first-child {
+    margin-right: 40px;
+}
+
+.header__right-box {
+    margin-left: 50px;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.lang {
+    margin-left: 40px;
+}
+
+.nav li a {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding: 7px 0;
+    transition: all ease-in-out .4s;
+}
+
+.nav li a:hover,
+.nav li.active a {
+    color: var(--main-accent);
+}
+
+.lang {
+    cursor: pointer;
+}
+
+.lang.active .lang__active .lang__arrow-tr{
+    transform: rotate(315deg);
+}
+
+.lang .lang__active {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--main-accent);
+    display: flex;
+    align-items: center;
+}
+
+.lang .lang__active .lang__arrow-tr {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--main-accent);
+    border-right: 2px solid var(--main-accent);
+    transform: rotate(135deg);
+    margin-left: 7px;
+    transition: all ease-in-out .4s;
+}
+
+.burger {
+    width: 30px;
+    height: 30px;
+    line-height: 2px;
+    position: relative;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-accent);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+/* * BURGER START * */
+.burger::before {
+    top: 0;
+}
+  
+.burger::after {
+    top: calc(100% - 2px);
+}
+  
+.burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-accent);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+}
+  
+.burger--active::before {
+    top: 50%;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+  
+.burger--active .burger__line {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+/* * BURGER END * */
+/* HEADER END */
+/* MAIN SCREEN START */
+.main-screen {
+    background-image: url('../images/home/main-screen.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+    padding-top: 420px;
+    padding-bottom: 115px;
+    z-index: 1;
+}
+
+.main-screen::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.47);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.main-screen__content {
+    max-width: 550px;
+}
+
+.section__main-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.section__main-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.buttons-group {
+    display: flex;
+    gap: 40px;
+}
+/* MAIN SCREEN END */

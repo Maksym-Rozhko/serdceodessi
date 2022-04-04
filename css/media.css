@@ -1,11 +1,111 @@
 @media (max-width : 1920px) {}
 @media (max-width : 1680px) {}
-@media (max-width : 1366px) {}
-@media (max-width : 1280px) {}
-@media (max-width : 1024px) {}
+@media (max-width : 1366px) {
+    .nav ul li:first-child {
+        margin-right: 15px;
+    }
+    .nav ul li:not(:first-child, :last-child) {
+        margin-right: 30px;
+    }
+    .header__right-box {
+        margin-left: 25px;
+    }
+    .lang {
+        margin-left: 20px;
+    }
+}
+@media (max-width : 1280px) {
+    .nav li a,
+    .button,
+    .lang .lang__active {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+@media (max-width : 1024px) {
+    .nav ul li:first-child {
+        margin-right: 10px;
+    }
+    .nav ul li:not(:first-child, :last-child) {
+        margin-right: 15px;
+    }
+    .header__right-box {
+        margin-left: 20px;
+    }
+    .lang {
+        margin-left: 10px;
+    }
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .nav li a,
+    .button,
+    .lang .lang__active {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .main-screen {
+        padding-top: 250px;
+    }
+    .section__main-text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .section__main-title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .section__main-text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
 @media (max-width : 800px) {}
-@media (max-width : 768px) {}
+@media (max-width : 768px) {
+    .nav ul li:not(:first-child) {
+        display: none;
+    }
+    .lang {
+        display: none;
+    }
+    .burger {
+        display: flex;
+        margin-left: 20px;
+    }
+    .main-screen {
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    .section__main-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .section__main-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .buttons-group {
+        gap: 20px;
+    }
+}
 @media (max-width : 620px) {}
-@media (max-width : 533px) {}
+@media (max-width : 533px) {
+    .button {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .section__main-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .section__main-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .buttons-group {
+        gap: 10px;
+    }
+}
 @media (max-width : 360px) {}
 @media (max-width : 320px) {}
