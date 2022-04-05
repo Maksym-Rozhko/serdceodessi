@@ -276,6 +276,20 @@ h1, h2, h3, h4, p {
     z-index: -1;
 }
 
+.main-screen::after {
+    content: "";
+    background-image: url('../images/shadow-1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 340px;
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+    z-index: -1;
+}
+
 .main-screen__content {
     max-width: 550px;
 }
@@ -303,6 +317,10 @@ h1, h2, h3, h4, p {
     gap: 40px;
 }
 
+.buttons-group .button {
+    max-width: 220px;
+}
+
 .main-screen .button--transparent {
     border: 1px solid #FFFFFF;
     background-color: transparent;
@@ -315,6 +333,24 @@ h1, h2, h3, h4, p {
 }
 /* MAIN SCREEN END */
 /* ABOUT US START */
+.about {
+    z-index: 1;
+}
+
+.about::after {
+    content: "";
+    background-image: url('../images/shadow-2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 1000px;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+}
+
 .about__container {
     display: flex;
     align-items: center;
@@ -387,7 +423,9 @@ h1, h2, h3, h4, p {
     margin-bottom: 40px;
 }
 
-.wards .section__top {
+.wards .section__top,
+.team .section__top,
+.media .section__top {
     max-width: 1390px;
     margin-left: auto;
     margin-right: auto;
@@ -467,3 +505,186 @@ h1, h2, h3, h4, p {
     transform: rotate(180deg);
 }
 /* WARDS US END */
+/* TEAM START */
+.team {
+    z-index: 1;
+}
+
+.team::after {
+    content: "";
+    background-image: url('../images/shadow-3.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 320px;
+    height: 1400px;
+    top: 200px;
+}
+
+.team .button--transparent {
+    max-width: 220px;
+}
+
+.team .slider__item {
+    max-width: 339px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.team .slider__content {
+    padding-top: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.slider .slider__image .image {
+    max-height: 446px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.slider__label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+}
+
+.team .slider__title {
+    margin-top: 10px;
+}
+
+.team .slider__text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.socials__link {
+    padding: 5px;
+}
+
+.socials__link .icon {
+    transition: all ease-in-out .4s;
+    fill: var(--main-accent);
+}
+
+.socials__link:hover .icon {
+    fill: #000;
+}
+
+.socials__link:first-child {
+    margin-right: 5px;
+}
+
+.slider .swiper-horizontal>.swiper-pagination-bullets {
+    position: static;
+    margin-top: 20px;
+}
+
+.slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--main-accent);
+    background-color: #fff;
+}
+
+.slider .swiper-pagination-bullet-active {
+    background-color: var(--main-accent);
+}
+
+.team .slider .swiper {
+    max-width: 1410px;
+    padding: 20px 5px;
+}
+/* TEAM END */
+/* HELP FOND START */
+.help {
+    z-index: 1;
+}
+
+.help::after {
+    content: "";
+    background-image: url('../images/shadow-4.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 525px;
+}
+
+.help .section__title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.help__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.help__item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.help__item.help__item--reverse {
+    flex-direction: row-reverse;
+}
+
+.help__images {
+    max-width: 580px;
+    width: 100%;
+}
+
+.help__images .image {
+    object-fit: cover;
+    border-radius: 15px;
+    height: 400px;
+}
+
+.help__content {
+    max-width: 878px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.help__item.help__item--reverse .help__content {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.help__title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #A7030E;
+}
+
+.help__text {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 18px;
+    margin-bottom: 25px;
+}
+
+.help .button {
+    display: block;
+}
+/* HELP FOND END */
+/* MEDIA START */
+.media .slider__title {
+    margin-top: 20px;
+}
+/* MEDIA END */
